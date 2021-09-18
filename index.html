@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>exercise1</title>
-    <link href="css/style.css" rel="stylesheet">
     <style>
         h2 {
             margin: 0;
@@ -19,138 +18,138 @@
 </head>
 
 <body>
-    <div class="container" id="cont">
-        <script>
-            var container = document.querySelector(".container");
-            container.style.background = "brown";
-            container.style.width = "660px";
-            container.style.height = "660px";
-            container.style.paddingLeft = "60px";
-            container.style.paddingBottom = "60px";
-            container.style.margin = "0 auto";
-            container.style.display = "flex";
-            container.style.flexWrap = "wrap";
+    <div class="container" id="cont"></div>
+    <script>
+        var container = document.querySelector(".container");
+        container.style.background = "brown";
+        container.style.width = "660px";
+        container.style.height = "660px";
+        container.style.paddingLeft = "60px";
+        container.style.paddingBottom = "60px";
+        container.style.margin = "0 auto";
+        container.style.display = "flex";
+        container.style.flexWrap = "wrap";
 
-            function my_initiation() {
-                var cell = document.createElement("div");
-                cell.className = "cell";
-                cont.append(cell);
-                cell.style.width = "60px";
-                cell.style.height = "60px";
-                cell.style.margin = "0px";
-                cell.style.padding = "0px";
-                cell.style.fontSize = "40px";
-                cell.style.fontWeight = "bold";
-                cell.style.textAlign = "center";
+        function my_initiation() {
+            var cell = document.createElement("div");
+            cell.className = "cell";
+            cont.append(cell);
+            cell.style.width = "60px";
+            cell.style.height = "60px";
+            cell.style.margin = "0px";
+            cell.style.padding = "0px";
+            cell.style.fontSize = "40px";
+            cell.style.fontWeight = "bold";
+            cell.style.textAlign = "center";
 
+        }
+        window.onload = my_initiation;
+
+        for (var n = 0; (n != 121); n++) {
+            window.onload = my_initiation();
+        };
+
+        var masCell = document.querySelectorAll(".cell");
+        for (var i = 0; (i < masCell.length); i++) {
+            var c;
+            if (i % 2 == 0) {
+                c = "dimgrey";
+            } else {
+                c = "bisque";
             }
-            window.onload = my_initiation;
-
-            for (var n = 0; (n != 121); n++) {
-                window.onload = my_initiation();
+            masCell[i].style.background = c;
+            if ((i > 33) && (i < 42)) {
+                masCell[i].innerText = "П";
+            };
+            if ((i > 88) && (i < 97)) {
+                masCell[i].innerText = "П";
             };
 
-            var masCell = document.querySelectorAll(".cell");
-            for (var i = 0; (i < masCell.length); i++) {
-                var c;
-                if (i % 2 == 0) {
-                    c = "dimgrey";
-                } else {
-                    c = "bisque";
-                }
-                masCell[i].style.background = c;
-                if ((i > 33) && (i < 42)) {
-                    masCell[i].innerText = "П";
-                };
-                if ((i > 88) && (i < 97)) {
-                    masCell[i].innerText = "П";
-                };
+            masCell[23].innerText = "Л";
+            masCell[24].innerText = "К";
+            masCell[25].innerText = "С";
+            masCell[26].innerText = "Ф";
+            masCell[27].innerText = "К";
+            masCell[28].innerText = "С";
+            masCell[29].innerText = "К";
+            masCell[30].innerText = "Л";
 
-                masCell[23].innerText = "Л";
-                masCell[24].innerText = "К";
-                masCell[25].innerText = "С";
-                masCell[26].innerText = "Ф";
-                masCell[27].innerText = "К";
-                masCell[28].innerText = "С";
-                masCell[29].innerText = "К";
-                masCell[30].innerText = "Л";
+            masCell[100].innerText = "Л";
+            masCell[101].innerText = "К";
+            masCell[102].innerText = "С";
+            masCell[103].innerText = "Ф";
+            masCell[104].innerText = "К";
+            masCell[105].innerText = "С";
+            masCell[106].innerText = "К";
+            masCell[107].innerText = "Л";
 
-                masCell[100].innerText = "Л";
-                masCell[101].innerText = "К";
-                masCell[102].innerText = "С";
-                masCell[103].innerText = "Ф";
-                masCell[104].innerText = "К";
-                masCell[105].innerText = "С";
-                masCell[106].innerText = "К";
-                masCell[107].innerText = "Л";
-
-                for (var f = 89; (f < 108); f++) {
-                    masCell[f].style.color = "white";
-                }
-                for (var f = 0; (f < 22); f++) {
-                    masCell[f].style.background = "brown";
-                }
-                for (var f = 110; (f < 121); f++) {
-                    masCell[f].style.background = "brown";
-                }
-
-
-                list_brown = [22, 33, 44, 55, 66, 77, 88, 99, 31, 32, 43, 42, 53, 54, 64, 65, 75, 76, 86, 87, 97, 98, 99, 108, 109];
-
-
-
-                list_alfa = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-                for (var c = 0; c != list_alfa.length; c++) {
-                    var a = (19 - c);
-                    masCell[a].innerHTML = '<h2>' + list_alfa[c] + '</h2>';
-                    var b = (111 + c);
-                    masCell[b].innerHTML = '<h2>' + list_alfa[c] + '</h2>';
-
-                };
-
-
-                var br = 0;
-                while (br != list_brown.length) {
-                    var bro = list_brown[br];
-                    masCell[bro].style.background = "brown";
-                    br++;
-                }
-
-
-
-                masCell[97].style.color = "black";
-                masCell[99].style.color = "black";
-
-
-
-
-                list_number = [99, 88, 77, 66, 55, 44, 33, 22, 31, 42, 53, 64, 75, 86, 97, 108];
-                var br = 0;
-                var m = 0;
-                while (br != list_number.length) {
-                    var bro = list_number[br];
-                    if (br < 8) {
-                        var n = 1 + br;
-                    } else {
-                        n = 1 + m;
-                        m = m + 1;
-                    }
-                    masCell[bro].innerHTML = '<h5>' + n + '</h5>';
-                    br++;
-                }
-
-                list_tansform = [31, 42, 53, 64, 75, 86, 97, 108, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 30, 34, 35, 36, 37, 38, 39, 40, 41];
-                var ln = 0;
-                while (ln != list_tansform.length) {
-                    var bro = list_tansform[ln];
-                    masCell[bro].style.innerHTML = 'transform', 'rotate(90deg)';
-
-                    ln++;
-                }
-
+            for (var f = 89; (f < 108); f++) {
+                masCell[f].style.color = "white";
+            }
+            for (var f = 0; (f < 22); f++) {
+                masCell[f].style.background = "brown";
+            }
+            for (var f = 110; (f < 121); f++) {
+                masCell[f].style.background = "brown";
             }
 
-        </script>
+
+            list_brown = [22, 33, 44, 55, 66, 77, 88, 99, 31, 32, 43, 42, 53, 54, 64, 65, 75, 76, 86, 87, 97, 98, 99, 108, 109];
+
+
+
+            list_alfa = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+            for (var c = 0; c != list_alfa.length; c++) {
+                var a = (19 - c);
+                masCell[a].innerHTML = '<h2>' + list_alfa[c] + '</h2>';
+                var b = (111 + c);
+                masCell[b].innerHTML = '<h2>' + list_alfa[c] + '</h2>';
+
+            };
+
+
+            var br = 0;
+            while (br != list_brown.length) {
+                var bro = list_brown[br];
+                masCell[bro].style.background = "brown";
+                br++;
+            }
+
+
+
+            masCell[97].style.color = "black";
+            masCell[99].style.color = "black";
+
+
+
+
+            list_number = [99, 88, 77, 66, 55, 44, 33, 22, 31, 42, 53, 64, 75, 86, 97, 108];
+            var br = 0;
+            var m = 0;
+            while (br != list_number.length) {
+                var bro = list_number[br];
+                if (br < 8) {
+                    var n = 1 + br;
+                } else {
+                    n = 1 + m;
+                    m = m + 1;
+                }
+                masCell[bro].innerHTML = '<h5>' + n + '</h5>';
+                br++;
+            }
+
+            list_tansform = [31, 42, 53, 64, 75, 86, 97, 108, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 30, 34, 35, 36, 37, 38, 39, 40, 41];
+            var ln = 0;
+            while (ln != list_tansform.length) {
+                var bro = list_tansform[ln];
+                masCell[bro].style.transform = 'rotate(180deg)';
+
+                ln++;
+            }
+
+        }
+
+    </script>
     </div>
 </body>
 
